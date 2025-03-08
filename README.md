@@ -3,20 +3,17 @@ Thanks to Cathy Fan for preparing the Makefile and instructions below:
 
 ## 1. Install Homebrew https://brew.sh/ (Skip if already installed)  
 
-Check if installed:
+Check if installed and update:
 ```sh
 brew --version
+brew update
 ```
 
 ## 2. Install QEMU
 QEMU is required to run xv6. Install it via Homebrew:
 ```sh
 brew install qemu
-```
-
-If you get an error message regarding the macOS version, update Homebrew first and then reinstall QEMU:
-```sh
-brew update
+brew install i686-elf-gcc
 ```
 
 ## 3. Clone the Repository
