@@ -41,3 +41,25 @@ ls
 To terminate xv6, first press:
 **`Ctrl + A`**  
 Then press **`X`**
+
+## 7. Updates (2026) - Rishit
+On M5 Macs, this repository should be built with the `i686-elf-*` toolchain.  
+Using `x86_64-elf-*` or `i386-elf-*` for this codebase may cause build or boot issues.
+
+Verify required tools:
+```sh
+which i686-elf-gcc
+which qemu-system-i386
+```
+
+If `i686-elf-gcc` is missing, install it:
+```sh
+brew install i686-elf-gcc
+```
+
+If the Makefile was modified to use a different cross-compiler prefix, restore it to `i686-elf-`, then rebuild:
+```sh
+make clean
+make
+make qemu-nox
+```
